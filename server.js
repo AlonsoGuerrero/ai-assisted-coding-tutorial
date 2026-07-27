@@ -21,13 +21,13 @@ app.get("/api/users", (req, res) => {
 });
 
 app.post("/api/users", (req, res) => {
-  const { name } = req.body;
+  const { name } = req.body || {};
 
-  if (!name) {
+  if (typeof name !== "string" || !name.trim()) {
     return res.status(400).json({ error: "The name is required" });
   }
 
-  res.status(201).json({ id: 3, name });
+  res.status(201).json({ id: 3, name: name.trim() });
 });
 
 app.listen(PORT, () => {
