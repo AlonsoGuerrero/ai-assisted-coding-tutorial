@@ -27,7 +27,7 @@ app.post("/api/users", (req, res) => {
   const { name } = req.body || {};
 
   if (typeof name !== "string" || !name.trim()) {
-    return res.status(400).json({ error: "The name is required" });
+    return res.status(400).json({ error: "Hey!!! The name is required" });
   }
 
   res.status(201).json({ id: 3, name: name.trim() });
