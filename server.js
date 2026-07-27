@@ -10,7 +10,7 @@ app.get("/health", (req, res) => {
 });
 
 app.get("/api/hello", (req, res) => {
-  res.json({ message: "Hola desde Express" });
+  res.json({ message: "Hello world from Express" });
 });
 
 app.get("/api/users", (req, res) => {
@@ -24,7 +24,7 @@ app.post("/api/users", (req, res) => {
   const { name } = req.body;
 
   if (!name) {
-    return res.status(400).json({ error: "El nombre es requerido" });
+    return res.status(400).json({ error: "The name is required" });
   }
 
   res.status(201).json({ id: 3, name });
