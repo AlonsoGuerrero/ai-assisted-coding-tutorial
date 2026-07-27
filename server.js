@@ -17,6 +17,9 @@ app.get("/api/users", (req, res) => {
   res.json([
     { id: 1, name: "Ana" },
     { id: 2, name: "Luis" },
+    { id: 3, name: "María" },
+    { id: 4, name: "Carlos" },
+    { id: 5, name: "Sofía" },
   ]);
 });
 
